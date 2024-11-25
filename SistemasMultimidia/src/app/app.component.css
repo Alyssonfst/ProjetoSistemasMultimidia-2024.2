@@ -1,21 +1,30 @@
-.container {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-  }
-  header h1 {
-    color: #ffcc00;
-  }
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .section {
-    margin: 15px;
-    width: 300px;
-    text-align: center;
-  }
-  
+/* Cabeçalho fixo no canto superior esquerdo */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+
+.header-info {
+  line-height: 1.5;
+}
+
+.header-icon {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
