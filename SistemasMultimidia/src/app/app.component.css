@@ -43,3 +43,28 @@
   width: 800px; /* Ajuste do tamanho da caixa, opcional */
   background-color: black; /* Cor de fundo para destacar */
 }
+
+.grafico-container {
+
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.grafico-visceral {
+
+  height: 200px; 
+  margin-bottom: auto;
+
+}
+
+.grafico-cintura {
+
+  width: auto;
+  height: 200px; 
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
