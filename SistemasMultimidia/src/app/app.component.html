@@ -38,42 +38,67 @@
       font-size: 10px;
     }
 
-    .header-icon {
-      background-color: red;
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      width: 40px;
-      height: 40px;
+    /* Layout flexível */
+    .content {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     /* Caixas de informações */
     .info-box {
       text-align: center;
       margin: 20px;
-      border: 1px solid #444;
       padding: 20px;
       border-radius: 8px;
-      background-color: #222;
+      background-color: transparent;
       flex: 1;
       min-width: 280px;
     }
 
     .info-box h2 {
-      color: #ffcc00;
+      color: #ffffff;
     }
 
-    /* Layout flexível */
-    .content {
+    /* Estilo para os grupos de informações */
+    .info-group {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
+      gap: 20px;
+    }
+
+    .info-item {
+      background-color: transparent;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      flex: 1;
+      color: white;
+      min-width: 120px;
+    }
+
+    .info-item h3 {
+      color: #ffcc00;
+      margin-bottom: 5px;
+    }
+
+    /* Caixa de Análise de Risco */
+    .risk-analysis {
+      text-align: left;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: transparent;
+      border-radius: 8px;
+      flex: 1;
+    }
+
+    .risk-analysis h2 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .risk-analysis p {
+      margin: 5px 0;
     }
   </style>
 </head>
@@ -91,38 +116,57 @@
 
     <!-- Corpo principal -->
     <div class="content">
-      <!-- Gordura -->
       <div class="info-box">
-        <h2>Gordura</h2>
-        <p><strong>Massa Gorda:</strong> 29,8 Kg</p>
-        <p><strong>% Gordura:</strong> 38,3%</p>
+      <h2>Gordura</h2>
+      <div class="info-group">
+        <div class="info-item">
+          <h3>Massa Gorda</h3>
+          <p>29,8 Kg</p>
+        </div>
+        <div class="info-item">
+          <h3>% Gordura</h3>
+          <p>38,3%</p>
+        </div>
       </div>
+    </div>
 
       <!-- Massa Magra e Muscular -->
-      <div class="info-box">
-        <h2>Massa Magra e Muscular</h2>
-        <p><strong>Massa Magra:</strong> 48,1 Kg / 61,7%</p>
-        <p><strong>Razão Músculo Gordura:</strong> 0,7 kg músculo / kg gordura</p>
-        <p><strong>Massa Muscular:</strong> 20,9 Kg / 26,8%</p>
+    <div class="info-box">
+      <h2>Massa Magra e Muscular</h2>
+      <div class="info-group">
+        <div class="info-item">
+          <h3>Massa Magra</h3>
+          <p>48,1 Kg / 61,7%</p>
+        </div>
+        <div class="info-item">
+          <h3>Razão Músculo Gordura</h3>
+          <p>0,7 kg músculo / kg gordura</p>
+        </div>
+        <div class="info-item">
+          <h3>Massa Muscular</h3>
+          <p>20,9 Kg / 26,8%</p>
+        </div>
       </div>
+    </div>
 
-      <!-- Peso e IMC -->
-      <div class="info-box">
-        <h2>Peso e Volume</h2>
-        <p><strong>Peso:</strong> 77,9 Kg</p>
-        <p><strong>Volume:</strong> 74,7 litros</p>
-        <p><strong>IMC:</strong> 26,96 kg/m²</p>
-      </div>
-
-      <!-- Áreas de Gordura -->
-      <div class="info-box">
-        <h2>Áreas de Gordura</h2>
-        <p><strong>Visceral:</strong> 68,5 cm²</p>
-        <p><strong>Subcutânea:</strong> 152,6 cm²</p>
+      <!-- Peso, Volume e IMC -->
+      <div class="info-group">
+        <div class="info-item">
+          <h3>Peso</h3>
+          <p>77,9 Kg</p>
+        </div>
+        <div class="info-item">
+          <h3>Volume</h3>
+          <p>74,7 litros</p>
+        </div>
+        <div class="info-item">
+          <h3>IMC</h3>
+          <p>26,96 kg/m²</p>
+        </div>
       </div>
 
       <!-- Análise de Risco -->
-      <div class="info-box">
+      <div class="risk-analysis">
         <h2>Análise de Risco Cardiometabólico</h2>
         <p><strong>Área de Gordura Visceral:</strong> 68,46</p>
         <p><strong>Relação Cintura/Estatura:</strong> 0,50</p>

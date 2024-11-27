@@ -28,3 +28,10 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Estilo para o título da seção */
+.info-box h2 {
+  color: white; /* Título em branco */
+  text-align: center; /* Centralizado */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
