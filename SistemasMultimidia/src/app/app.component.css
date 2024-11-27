@@ -35,3 +35,11 @@
   text-align: center; /* Centralizado */
   margin-bottom: 20px; /* Espaçamento inferior */
 }
+
+.mass-magra {
+  position: absolute; /* Define a posição relativa à página */
+  bottom: 20px; /* Distância da parte inferior */
+  left: 20px; /* Distância da parte esquerda */
+  width: 800px; /* Ajuste do tamanho da caixa, opcional */
+  background-color: black; /* Cor de fundo para destacar */
+}
