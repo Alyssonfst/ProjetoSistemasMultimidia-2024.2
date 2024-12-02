@@ -84,7 +84,7 @@
 
     /* Caixa de Análise de Risco */
     .risk-analysis {
-      text-align: left;
+      text-align: center;
       margin-top: 20px;
       padding: 20px;
       background-color: transparent;
@@ -116,38 +116,68 @@
 
     <!-- Corpo principal -->
     <div class="content">
+      <!-- Gordura -->
+
       <div class="info-box">
-      <h2>Gordura</h2>
-      <div class="info-group">
-        <div class="info-item">
-          <h3>Massa Gorda</h3>
-          <p>29,8 Kg</p>
-        </div>
-        <div class="info-item">
-          <h3>% Gordura</h3>
-          <p>38,3%</p>
+
+        <h2>Gordura</h2>
+
+        <div class="info-group">
+
+          <div class="info-item">
+
+            <h3>Massa Gorda</h3>
+            <p>29,8 Kg</p>
+
+          </div>
+
+          <div class="info-item">
+
+            <h3>% Gordura</h3>
+            <p>38,3%</p>
+            
+            <div class="grafico-visceral">
+              <canvas id="grafico-gordura-percent" height="100" width="200"></canvas>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
+
+      <div class="modelo3d"> 
+
+        <div id="modelo-3d" style="width: 400px; height: 600px; background-color: #111; align-items: center; justify-content: center;"></div>
+      
+      </div>
 
       <!-- Massa Magra e Muscular -->
-<div class="info-box mass-magra">
-  <h2>Massa Magra e Muscular</h2>
-  <div class="info-group">
-    <div class="info-item">
-      <h3>Massa Magra</h3>
-      <p>48,1 Kg / 61,7%</p>
-    </div>
-    <div class="info-item">
-      <h3>Razão Músculo Gordura</h3>
-      <p>0,7 kg músculo / kg gordura</p>
-    </div>
-    <div class="info-item">
-      <h3>Massa Muscular</h3>
-      <p>20,9 Kg / 26,8%</p>
-    </div>
-  </div>
-</div>
+      <div class="info-box">
+
+        <h2>Massa Magra e Muscular</h2>
+        
+        <div class="info-group">
+        
+          <div class="info-item">
+            
+            <h3>Massa Magra</h3>
+            <p>48,1 Kg / 61,7%</p>
+
+          </div>
+
+          
+        
+          <div class="info-item">
+            <h3>Razão Músculo Gordura</h3>
+            <p>0,7 kg músculo / kg gordura</p>
+          </div>
+        
+          <div class="info-item">
+            <h3>Massa Muscular</h3>
+            <p>20,9 Kg / 26,8%</p>
+          </div>
+        
+        </div>
+      </div>
 
       <!-- Peso, Volume e IMC -->
       <div class="info-group">
@@ -168,29 +198,28 @@
       <!-- Análise de Risco -->
       <div class="risk-analysis">
         <h2>Análise de Risco Cardiometabólico</h2>
-        <p><strong>Área de Gordura Visceral:</strong> 68,46</p>
+      
+        <div>
+
+          <p><strong>Área de Gordura Visceral:</strong> 68,46</p>
+          <div class="grafico-visceral">
+            <canvas id="grafico-visceral" width="200" height="100"></canvas>
+          </div>
+        </div>
+
+      <div>
+
         <p><strong>Relação Cintura/Estatura:</strong> 0,50</p>
+        
+        <div class="grafico-cintura">
+          <canvas id="grafico-cintura-estatura" width="200" height="100"></canvas>
+        </div>
+      
+      </div>
+
         <p><strong>Índice de Conicidade:</strong> 1,14</p>
       </div>
-    </div>
-
-    <div class="grafico-container">
-
-      <div class="grafico-visceral">
-        <h4>Área de Gordura Visceral</h4>
-        <canvas id="grafico-visceral" width="200" height="100"></canvas>
-      </div>
-      
-      <div class="grafico-cintura">
-        <h4>Relação Cintura Estatura</h4>
-        <canvas id="grafico-cintura-estatura" width="200" height="100"></canvas>
-        <h3>0,5</h3>
-      </div>
-      
-      <div id="modelo-3d" style="width: 500px; height: 500px; background-color: #111; margin: 0 auto;"></div>
-
     </div>
   </div>
 </body>
 </html>
-
