@@ -79,3 +79,26 @@
   margin-top: 150px;
   background-color: #111;
 }
+
+    /* Estilo da barra de navegação */
+    nav {
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      top: 0;
+      position: absolute;
+      left: 0;
+      z-index: 1000; /* Garantir que fique acima de outros elementos */
+    }
+
+    /* Estilo dos links dentro da barra de navegação */
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
