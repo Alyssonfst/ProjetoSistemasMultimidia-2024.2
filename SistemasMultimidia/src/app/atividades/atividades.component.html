@@ -1,65 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atividades Físicas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    main {
-      padding: 2rem;
-    }
-    .activity-list {
-      list-style: none;
-      padding: 0;
-    }
-    .activity-item {
-      display: flex;
-      justify-content: space-between;
-      background: #ffffff;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    .activity-item button {
-      background: #4CAF50;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 3px;
-    }
-    .activity-item button:hover {
-      background: #45a049;
-    }
-    .score {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Atividades Físicas</h1>
-    <p>Complete as atividades e acumule pontos!</p>
-  </header>
-  <main>
-    <ul class="activity-list" id="activity-list"></ul>
-    <div class="score">Pontuação Total: <span id="score">0</span></div>
-  </main>
-  <script src="script.js"></script>
-</body>
-</html>
+<header>
+  <h1>Atividades Físicas</h1>
+  <p>Complete as atividades e acumule pontos!</p>
+</header>
+
+<main>
+  <ul class="activity-list" id="activity-list">
+    <li *ngFor="let activity of activities; let i = index" class="activity-item">
+      <span>{{ activity.name }} ({{ activity.points }} pontos)</span>
+      <button (click)="completeActivity(i)">Concluir</button>
+    </li>
+  </ul>
+
+  <div class="score">Pontuação Total: <span id="score">{{ totalScore }}</span></div>
+
+  <div class="add-activity">
+    <h2>Adicionar Nova Atividade</h2>
+    <form (ngSubmit)="addActivity()">
+      <label>
+        Nome da Atividade:
+        <input type="text" [(ngModel)]="newActivityName" name="activityName" required />
+      </label>
+      <label>
+        Pontos:
+        <input type="number" [(ngModel)]="newActivityPoints" name="activityPoints" required />
+      </label>
+      <button type="submit">Adicionar</button>
+    </form>
+  </div>
+</main>
