@@ -58,8 +58,14 @@ export class HomeComponent implements OnInit {
     this.scene.add(pointLight);
 
     const controls = new OrbitControls(this.camera, this.renderer.domElement);
-    controls.enableDamping = true;
     controls.dampingFactor = 0.05;
+    controls.screenSpacePanning = false;
+    controls.minDistance = 300;
+    controls.maxDistance = 150;
+    controls.minPolarAngle = Math.PI / 2; // Limite inferior (horizontal)
+    controls.maxPolarAngle = Math.PI / 2; // Limite superior (horizontal)
+    this.camera.lookAt(0, 0, 0);
+    this.camera.position.set(0, 2, 5);
 
     this.loadModelBasedOnBMI();
   }
