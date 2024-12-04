@@ -15,7 +15,7 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding-top: 70px; /* Aumentar o padding para evitar que o conteúdo fique atrás da barra */
+      padding-top: 70px; 
     }
 
     /* Container principal */
@@ -25,7 +25,7 @@
       padding: 20px;
       background-color: black;
       flex-grow: 1;
-      margin-top: 20px; /* Adiciona um espaço para garantir que o conteúdo não fique colado à barra */
+      margin-top: 20px; 
     }
 
     /* Cabeçalho */
@@ -69,6 +69,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      margin: 0 auto;
     }
 
     .info-item {
@@ -139,10 +140,10 @@
           <div class="info-item">
 
             <h3>% Gordura</h3>
-            <p>38,3%</p>
+            <p>{{gordura_percent}}%</p>
             
-            <div class="grafico-visceral">
-              <canvas id="grafico-gordura-percent" height="100" width="200"></canvas>
+            <div>
+              <canvas id="grafico-gordura-percent" height="200" width="200"></canvas>
             </div>
 
           </div>
@@ -196,25 +197,29 @@
         </div>
         <div class="info-item">
           <h3>IMC</h3>
-          <p>26,96 kg/m²</p>
+          <p>{{imc}} kg/m²</p>
         </div>
       </div>
 
       <!-- Análise de Risco -->
-      <div class="risk-analysis">
-        <h2>Análise de Risco Cardiometabólico</h2>
       
+      <div class="risk-container">
+        <h2>Análise de Risco Cardiometabólico</h2>
+
+        <div class="risk-graphs">
+          
         <div>
 
-          <p><strong>Área de Gordura Visceral:</strong> 68,46</p>
           <div class="grafico-visceral">
+            <p><strong>Área de Gordura Visceral:</strong> {{gordura_visceral}}</p>
+
             <canvas id="grafico-visceral" width="200" height="100"></canvas>
           </div>
         </div>
 
       <div>
 
-        <p><strong>Relação Cintura/Estatura:</strong> 0,50</p>
+        <p><strong>Relação Cintura/Estatura:</strong> {{cintura_estatura}}</p>
         
         <div class="grafico-cintura">
           <canvas id="grafico-cintura-estatura" width="200" height="100"></canvas>
@@ -222,7 +227,7 @@
       
       </div>
 
-        <p><strong>Índice de Conicidade:</strong> 1,14</p>
+    </div>
       </div>
     </div>
   </div>
